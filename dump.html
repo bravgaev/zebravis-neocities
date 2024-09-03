@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ZEBRAVIS DUMP</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+
+    // This piece of code comes from this stack https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
+    // It loads all of the images of the dump folder into the body of the HTML :) that way I don't have to worry about adding a line of code every time I add to the dump! 
+    var folder = "dump/";
+     
+    $(document).ready(function(){
+    $.ajax({
+            url : folder,
+            success: function (data) {
+                $(data).find("a").attr("href", function (i, val) {
+                    if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                        $("body").append( "<img src='"+ val +"'>" );
+                    } 
+                });
+            }
+        });
+    });
+</script>
+<body>
+    <nav>
+        <a href="main.html" class="nav-link">Home</a>
+        <a href="tattoo.html" class="nav-link">Tattoo-zone</a>
+        <a href="art.html" class="nav-link">Art stuff</a>
+        <a href="code.html" class="nav-link">Code-zone</a>
+        <a href="dump.html" class="nav-link">The Dump</a>
+        <a href="links.html" class="nav-link">Links</a>
+
+
+    </nav>
+    <main style="text-align:center; width: auto;">
+        <div class="container">
+            <h1>The Dump</h1>
+            <p>Welcome to the dump! It's a bit messy over here but that's the whole point. This is where I dump random stuff for people to look at.</p>
+        </div>
+        
+    </main> 
+</body>
+</html>
