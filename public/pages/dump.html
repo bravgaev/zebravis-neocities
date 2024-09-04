@@ -8,22 +8,20 @@
 </head>
 <script>
 
-    // This piece of code comes from this stack https://stackoverflow.com/questions/18480550/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jquery
-    // It loads all of the images of the dump folder into the body of the HTML :) that way I don't have to worry about adding a line of code every time I add to the dump! 
-    var folder = "/dump/";
+    //This piece of code loads all of the files mentioned in the dump index into the page body
+    var dump_index = "/dump/index.txt";
      
     $(document).ready(function(){
     $.ajax({
-            url : folder,
+            url : dump_index,
             success: function (data) {
-                $(data).find("a").attr("href", function (i, val) {
-                    if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                var lines = data.split("\n")        
+                $.each(lines, function(n, val){
                         $("body").append( "<img src='"+ val +"'>" );
-                    } 
+                    });
+                } 
                 });
-            }
-        });
-    });
+            });
 </script>
 <body>
     <nav>
@@ -34,7 +32,6 @@
         <a href="dump.html" class="nav-link">The Dump</a>
         <a href="links.html" class="nav-link">Links</a>
 
-
     </nav>
     <main style="text-align:center; width: auto;">
         <div class="container">
@@ -43,5 +40,8 @@
         </div>
         
     </main> 
+
+
+
 </body>
 </html>

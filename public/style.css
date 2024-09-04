@@ -91,7 +91,6 @@ h2 {
 
 .nav-link {
     flex: 1;
-    
 }
 
 #guestbook {
@@ -113,3 +112,21 @@ h4.update{
     border-top: black solid; 
     padding-top:2px
 }
+
+img.tattoo {
+    flex: 1;
+    max-width: 10%;
+    max-height: 8em;
+    padding: 2em;
+    position: relative;
+}
+
+.dot {
+    height: 2em;
+    width: 2em;
+    background-color: red;
+    border-radius: 50%;
+    position:relative;
+    right: 6em;
+    top: 4em;
+  }
