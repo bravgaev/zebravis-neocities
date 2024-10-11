@@ -2,27 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>ZEBRAVIS DUMP</title>
+    <title>ZEBRAVIS LINKS</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<script>
-
-    //This piece of code loads all of the files mentioned in the dump index into the page body
-    var dump_index = "/dump/index.txt";
-     
-    $(document).ready(function(){
-    $.ajax({
-            url : dump_index,
-            success: function (data) {
-                var lines = data.split("\n")        
-                $.each(lines, function(n, val){
-                        $("body").append( "<img src='"+ val +"'>" );
-                    });
-                } 
-                });
-            });
-</script>
 <body>
     <nav>
         <a href="main.html" class="nav-link">Home</a>
@@ -35,13 +18,18 @@
     </nav>
     <main style="text-align:center; margin: auto; margin-bottom: 4em;">
         <div class="container">
-            <h1>The Dump</h1>
-            <p>Welcome to the dump! It's a bit messy over here but that's the whole point. This is where I dump random stuff for people to look at.</p>
+            <h1>Links to other places</h1>
+                
+            <p>
+                <a href="https://zebravis.itch.io">Itch.io</a>
+                <a href="https://www.instagram.com/zebravis.tattoo/">Instagram</a>
+            </p>
+
         </div>
         
     </main> 
 
-
+    <img src="/img/zebravis.png" id="zebravis">
 
 </body>
 </html>
