@@ -94,30 +94,40 @@ h4.update{
     padding-top:2px
 }
 
-img.tattoo {
-    flex: 1;
-    max-width: 15%;
-    max-height: 8em;
-    padding: 2em;
-    position: relative;
+.flashtable {
+    width: 100%;
 }
 
+.flashtable tr, .flashtable td {
+    border: none;
+    padding: 2em;
+    vertical-align: top;
+    position: relative;
+    width: 5em;
+    height: 7em;
+  }
+
+  .flashtable img {
+    position: absolute;
+    display: block;
+    max-height: 7em;
+  }
 
 .dot {
-    height: 30px;
-    width: 30px;
+    height: 2em;
+    width: 2em;
     background-color: red;
     border-radius: 50%;
     position:relative;
-    right: 6em;
-    top: 4em;
+    display: block;
+    left: 50%;
   }
 
 #zebravis {
     rotate: -90deg;
     position: sticky;
     bottom: 50%;
-
+    width: 20%;
 }
 
 
