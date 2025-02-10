@@ -14,18 +14,68 @@
 
 body {
     font-family: "IBM DOS ISO8";
+    
+}
+
+hr {
+    width: 30%;
+    border: 2px solid black
+}
+
+a{ 
+    color:slateblue
+}
+a:visited{
+    color: darkslateblue 
 }
 
 .flex-container {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 30%;
     margin: auto;
     justify-content: space-around;
 }
 
-.flex-item {
-      
+.status {
+    display:flex;
+    flex-direction: row;
+    border: 5px solid black;
+    width: 50%; 
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 1em
+}
+.status-item{
+    padding-left: 1em;
+}
+
+.curiosities-page {
+    background-color: darkseagreen;
+}
+
+.curiosities-page a:hover{
+    background-color: seagreen;
+    color:white
+}
+.curio{
+    background: rgba(0, 0, 0 , 0.1);
+    padding: 0.5em;
+    margin-top: 1em;
+  
+}
+.curio  p{
+    background: rgba(0, 0, 0 , 0.05);
+    padding: 0.1em
+}
+
+.about-page {
+    background-color: lightsalmon;
+}
+
+.about-page a:hover{
+    background-color: salmon;
+    color:white
 }
 
 #homelink{
