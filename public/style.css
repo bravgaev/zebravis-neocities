@@ -22,12 +22,18 @@ hr {
     border: 2px solid black
 }
 
+footer {
+    margin: auto;
+    text-align: center;
+}
+
 a{ 
-    color:slateblue
+    color:steelblue
 }
 a:visited{
-    color: darkslateblue 
+    color: darkslategray
 }
+
 
 .flex-container {
     display: flex;
@@ -36,12 +42,21 @@ a:visited{
     margin: auto;
     justify-content: space-around;
 }
+@media screen and (max-width: 1200px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    img{
+        max-width:100%;
+    }
+}
 
 .status {
     display:flex;
     flex-direction: row;
     border: 5px solid black;
     width: 50%; 
+    height: 3em;
     margin: auto;
     margin-top: 10%;
     margin-bottom: 1em
@@ -75,6 +90,15 @@ a:visited{
 
 .about-page a:hover{
     background-color: salmon;
+    color:white
+}
+
+.blog-page {
+    background-color: lightskyblue;
+}
+
+.blog-page a:hover {
+    background-color:steelblue;
     color:white
 }
 
