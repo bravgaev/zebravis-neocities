@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEBRAVIS blog</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="blog-page">
+    
+    <div style="margin-top: 5%;">
+        <a id="homelink" href="../blog.html"><-- back</a>
+       
+        <div class="flex-container">
+            <h1>Solitaire combinations and programming projects </h1>
+        </div>
+        <hr>
+
+        <div class="flex-container" style="flex-direction: column; justify-content: left;">
+            <p>A while back I saw a <a href="https://www.youtube.com/watch?v=kY6DmPs4klU">video</a> by Simone of the Polygon Youtube 
+                channel about playing cards. This piqued my interest, as a huge card game lover :). My love for card games started as
+                a kid, playing Top Trumps decks on the playground, collecting some Pokémon cards and later playing classic card games
+                during lunch. But also digitally card games got me hooked, there's a reason solitaire shipped on almost every pc and 
+                i'd rather not talk about the hours I spent playing Hearthstone as a teen. I've also spent countless hours playing 
+                rougelike cardgames like Slay the Spire or Balatro lately. 
+            </p>
+            <p>
+                But after watching the video I got back into playing solitaire.
+                As Simone says in the video, there's more permutations of a 52 card deck then there are atoms on Earth. The idea that when 
+                you solve a game of solitaire, you will most likely be the first person in history to have solved that exact layout of cards.
+                After I learned that Zachtronics' solitaire collection was available for my phone, I immediately bought it. The game contains a 
+                collection of solitaire variants originally created for as mini-games for various Zachtronics puzzle games. Each one having some 
+                novel rules set ranging from minor tweaks to solitaire variants, to entire new decks (Shenzen Solitaire uses a three color deck inspired
+                by mahjong tiles). I loved the way that a subtle rules change could create an entirely different puzzle with the same playing cards that
+                have been around for ages, like Cluj solitaire's ability to cheat by locking a card in place until it can be placed correctly.
+            </p>
+
+            <p>
+                I thought that recreating one of the solitaire variants featured in the collection would be a great way to practice some game-design.
+                So I set out to make a demake (remake/imagining of a game in a retro style) of Sawayama Solitaire from the Last Call BBS game. I wanted 
+                to do this in PICO-8 as I had been messing around with the platform in the past but hadn't managed to finish a project. So the result of 
+                that effort is below. It's not perfect, but it is definitely playable :) 
+            </p>
+
+            <h4>How to play</h4>
+
+            <p>
+                <i>Just play it! If you've ever played solitaire, you will probably catch on to the small rule changes quickly. Otherwise below is
+                    a little rules explanation.
+                </i>
+            </p>
+
+            <p>
+                Sawayama solitaire works as a tweak of the classic Klondike solitaire. The goal of the game is to stack all cards, by suit, in order 
+                of ace to king in the foundation piles on the left of the screen. You can do this by organizing the stacks of cards, cards can be in a stack
+                of alternating color and descending value. Any correct stack of cards can be dragged onto an empty stack. In the top left you can find 
+                a deck of the remaining cards. Clicking on the deck, deals out the top three cards. Each of the dealt out cards (this is called 
+                the stock) is visible, you can hover over the covered cards to show them. After all the cards from the deck are dealt, there's no 
+                re-dealing the cards, instead the empty space where the deck was becomes a free space where one card can be stored. This also means that 
+                there's complete information about the cards once the deck has been dealt. The game is controled with your mouse, just click and drag 
+                the cards where you want them (touch controls on your phone work-ish but there kinda jank). Have
+            </p>
+        </div>
+            
+    
+    </div>
+
+    <div class="flex-container">
+     <iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=sawayama_demake" allowfullscreen style="border:none; overflow:hidden; width: 100% ;aspect-ratio: 1 / 1"></iframe>
+    </div>
+</body>
+</html>
